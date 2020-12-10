@@ -5,7 +5,7 @@ function electLeaderFunction() {
 
   function onElectUserEvent() {
     var user = prompt("Enter your name.");
-    var vote = prompt("Who you wanna vote to? Choose one:", "");
+    var vote = prompt("Whom you wanna elect? Choose one:", "");
     var data = [{ user, vote }];
     console.log("user", data);
     console.log("vote", data);
