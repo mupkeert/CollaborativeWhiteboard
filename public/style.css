@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.snapshotImageElement {
+  position: absolute;
+  left: 10px;
+  top: 1.5em;
+  margin: 20px;
+  border: thin solid #aaaaaa;
+}
+/**
+ * Canvas
+ */
+
+.whiteboard {
+  height: 80%;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  display: block;
+  border-radius: 10px;
+  position: absolute;
+  border: 1px solid #000;
+}
+
+.colors {
+  align-items: center;
+}
+
+.color {
+  display: inline-block;
+  height: 38px;
+  width: 38px;
+  align-items: center;
+}
+
+.color.black {
+  background-color: black;
+}
+.color.red {
+  background-color: red;
+}
+.color.green {
+  background-color: green;
+}
+.color.blue {
+  background-color: blue;
+}
+.color.yellow {
+  background-color: yellow;
+}
+.color.violet
+ {
+  background-color: violet;
+}
+.color.orange {
+  background-color: orange;
+}
+
+.choice {
+  height: 100px;
+  display: inline-block;
+  width: 50px;
+  justify-content: flex-end;
+}
+.result {
+  height: 200px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.bar {
+  height: 0%;
+  width: 70%;
+  margin: 0 auto;
+}
+.bar[data-choice="1"] {
+  background-color: green;
+}
+.bar[data-choice="2"] {
+  background-color: red;
+}
+.label {
+  height: 70px;
+  text-align: center;
+}

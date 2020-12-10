@@ -1,0 +1,27 @@
+{
+  "name": "collaborativewhiteboard",
+  "version": "1.0.0",
+  "description": "cloud collaborative whiteboard system",
+  "main": "index.js",
+  "dependencies": {
+    "12": "^1.0.2",
+    "express": "^4.17.1",
+    "node": "^15.3.0",
+    "socket.io": "^3.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mupkeert/CollaborativeWhiteboard.git"
+  },
+  "author": "keerthi muppalla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mupkeert/CollaborativeWhiteboard/issues"
+  },
+  "homepage": "https://github.com/mupkeert/CollaborativeWhiteboard#readme"
+}
