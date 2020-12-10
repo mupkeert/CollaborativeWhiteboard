@@ -1,0 +1,94 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cloud Based Collaborative Whiteboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      id="letCollaborate"
+      onclick="TogetherJS(this); return false;"
+      style="
+        align-items: center;
+        background-color: cadetblue;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      "
+    >
+      Collaborate
+    </button>
+    <script src="https://togetherjs.com/togetherjs-min.js"></script>
+
+    <button
+      id="leader"
+      onclick="electLeaderFunction()"
+      style="
+        align-items: center;
+        background-color: cadetblue;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      "
+    >
+      Choose A Leader
+    </button>
+    <div id="controls">
+      <input
+        id="snapshotButton"
+        type="button"
+        value="Take snap"
+        style="
+          align-items: center;
+          background-color: cadetblue;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        "
+      />
+      <img id="snapshotImageElement" />
+    </div>
+    <div id="choices">
+      <p>
+        want to save the copy of whiteboard? Please share your opinion by
+        clicking on the Vote button below.
+      </p>
+      <div class="choice">
+        <div class="result">
+          <div class="bar" data-choice="1"></div>
+        </div>
+        <div class="label">
+          <p>Yes</p>
+          <button data-choice="1">Commit</button>
+          <br />
+        </div>
+      </div>
+      <div class="choice">
+        <div class="result">
+          <div class="bar" data-choice="2"></div>
+        </div>
+        <div class="label">
+          <p>No</p>
+          <button data-choice="2">Deny</button>
+          <br />
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+
+    <canvas class="whiteboard"></canvas>
+    <div class="colors">
+      <div class="color black"></div>
+      <div class="color red"></div>
+      <div class="color green"></div>
+      <div class="color violet"></div>
+      <div class="color blue"></div>
+      <div class="color orange"></div>
+      <div class="color yellow"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/leader.js"></script>
+    <script src="/stateSave.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>
